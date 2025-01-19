@@ -48,7 +48,7 @@ TRIPPY ROOM BOOKING is a web-based application built using the MERN stack (Mongo
 
 ## Step 1: Clone the Repository
 ```bash
-git clone https://github.com/yourusername/trippy-room-booking.git
+git clone https://github.com/DeepakDenre/TrippyBookingSystem.git
 ```
 ```
 cd trippy-room-booking
@@ -132,10 +132,25 @@ cd frontend
 npm install
 npm run build
 ```
-####  2.Copy the build files to the Nginx default web directory:
+####  2.Copy the build files to the frontend server directory:
 ```bash
-Copy code
-sudo cp -r build/* /var/www/html/
+mkdir ~/frontend_server
+cp -r build ~/frontend_server/
+cp server.js ~/frontend_server/
+cd ~/frontend_server
+```
+#### 3.install the dependencies for server.js
+```
+npm i express cors
+```
+#### 4.Start the backend server using PM2:
+```bash
+pm2 start server.js --name trippy-frontend
+pm2 sartup
+```
+#### 5.Copy and past the output of pm2 startup
+```bash
+pm2 save
 ```
 - ### Step 4.5: Configure Nginx
 ####  1.Open the Nginx configuration file:
@@ -159,8 +174,12 @@ server {
     }
 
     location / {
-        root /var/www/html;
-        index index.html;
+        proxy_pass http://localhost:4000/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
         try_files $uri /index.html;
     }
 }
