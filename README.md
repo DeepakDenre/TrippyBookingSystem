@@ -1,11 +1,12 @@
 # **TRIPPY ROOM BOOKING**
-
 TRIPPY ROOM BOOKING is a web-based application built using the MERN stack (MongoDB, Express.js, React.js, Node.js) that allows users to book rooms seamlessly and enables administrators to manage bookings efficiently.
 
----
+<img src="./Screenshot_1.png" alt="Screenshot 1" title="Screenshot 1"  />
+<hr>
+<img src="./Screenshot_2.png" alt="Screenshot 2" title="Screenshot 2" width="49%" />
+<img src="./Screenshot_3.png" alt="Screenshot 3" title="Screenshot 3" width="49%" />
 
 ## **Features**
-
 ### **For Users**
 - User registration and login.
 - View available rooms with details.
@@ -16,8 +17,6 @@ TRIPPY ROOM BOOKING is a web-based application built using the MERN stack (Mongo
 - Add, edit, and delete rooms.
 - View and manage user bookings.
 - Cancel or remove bookings as necessary.
-
----
 
 ## **Technologies Used**
 
@@ -36,8 +35,6 @@ TRIPPY ROOM BOOKING is a web-based application built using the MERN stack (Mongo
 - **AWS EC2**: Hosting the application.
 - **PM2**: Process management for ensuring uptime.
 - **Nginx**: Reverse proxy server for managing requests.
-
----
 
 ## **Setup Instructions**
 
