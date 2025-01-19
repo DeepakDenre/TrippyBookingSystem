@@ -64,8 +64,7 @@ npm install
 ```
 #### 3.Create a .env file in the backend directory and add the following environment variables:
 ```.env
-MONGO_URI=your-mongodb-uri
-JWT_SECRET=your-jwt-secret
+MONGO_URI=
 PORT=5000
 ```
 #### 4.Start the backend server:
@@ -83,7 +82,13 @@ cd frontend
 ```bash
 npm install
 ```
-#### 3.Start the development server:
+#### 3.Create a .env file in the backend directory and add the following environment variables:
+```.env
+REACT_APP_Cloudinary_Cloud_Name=
+REACT_APP_Cloudinary_Upload_Preset=
+REACT_APP_CLOUDINARY_URL=
+```
+#### 4.Start the development server:
 ```bash
 npm run dev
 ```

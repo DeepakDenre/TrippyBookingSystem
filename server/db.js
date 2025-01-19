@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 //PLEASE EDIT YOUR MONGO DB CONNECTION HERE
 /*YOU CAN FIND SAMPLE COLLECTION at mongodb_collections folder */
-var mongoURL = "mongodb+srv://denredeepak:HotelBooking@cluster0.qcjt5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+var mongoURL = process.env.MONGODB_URI || "mongodb://localhost:27017/yourDBName";
 
 mongoose.connect(mongoURL, { useUnifiedTopology: true, useNewUrlParser: true });
 
